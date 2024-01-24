@@ -21,8 +21,10 @@ runs:
       shell: bash
       run: |
         cd unity
+        pwd
         npm i
         cd native_src
+        pwd
         node ../cli make --platform ios --backend ${{ inputs.backend }} --config ${{ inputs.config }}
     - name: Upload
       uses: actions/upload-artifact@v3
