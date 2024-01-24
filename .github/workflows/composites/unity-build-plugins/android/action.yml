@@ -20,7 +20,9 @@ runs:
     - name: Install NDK
       shell: bash
       run: |
+        pwd
         cd ~
+        pwd
         rm -rf ~/android-ndk-r21b
         wget -O NDK -q https://dl.google.com/android/repository/android-ndk-r21b-linux-x86_64.zip
         sudo apt install unzip -y
@@ -28,9 +30,12 @@ runs:
     - name: Build
       shell: bash
       run: |
+        pwd
         cd unity
+        pwd
         npm i
         cd native_src
+        pwd
         ANDROID_NDK=~/android-ndk-r21b node ../cli make --platform android --backend ${{ inputs.backend }} --config ${{ inputs.config }}
     - name: Upload
       uses: actions/upload-artifact@v3
