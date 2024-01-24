@@ -23,7 +23,7 @@ runs:
         cd unity
         pwd
         npm i
-        cd native_src
+        cd native_src_il2cpp
         pwd
         node ../cli make --platform ios --backend ${{ inputs.backend }} --config ${{ inputs.config }}
     - name: Upload
