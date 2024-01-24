@@ -27,11 +27,13 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           backend: v8_9.4
       - name: BuildAndroidQuickJS
+        if: false
         uses: ./.github/workflows/composites/unity-build-plugins/android/
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           backend: quickjs
       - name: BuildAndroidNodeJS
+        if: false
         uses: ./.github/workflows/composites/unity-build-plugins/android/
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
