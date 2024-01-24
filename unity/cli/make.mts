@@ -150,6 +150,7 @@ const platformCompileConfig = {
 
 /////////////////// make
 async function runPuertsMake(cwd: string, options: BuildOptions) {
+    console.log(`cwd: ${cwd}`)
     //// 环境与依赖监测 environment and dependencies checking.
     if (!existsSync(`${cwd}/CMakeLists.txt`)) {
         console.error("[Puer] Cannot find CMakeLists.txt");
