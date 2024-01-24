@@ -28,7 +28,7 @@ runs:
       run: |
         cd unity
         npm i
-        cd native_src
+        cd native_src_il2cpp
         node ../cli make --platform linux --backend ${{ inputs.backend }} --config ${{ inputs.config }}
     - name: Upload
       uses: actions/upload-artifact@v3
