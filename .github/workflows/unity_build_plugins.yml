@@ -38,7 +38,6 @@ jobs:
           backend: nodejs_16
 
   ios:
-    if: false
     runs-on: macos-11
 
     steps:
@@ -60,7 +59,6 @@ jobs:
           backend: nodejs_16
 
   osx:
-    if: false
     runs-on: macos-11
 
     steps:
@@ -82,7 +80,6 @@ jobs:
           backend: quickjs
 
   windows:
-    if: false
     runs-on: windows-2019
 
     steps:
@@ -104,7 +101,6 @@ jobs:
           backend: nodejs_16
 
   linux64:
-    if: false
     runs-on: ubuntu-latest
     
     steps:
