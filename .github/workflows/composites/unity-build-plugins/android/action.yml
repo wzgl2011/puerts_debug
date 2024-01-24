@@ -34,7 +34,7 @@ runs:
         cd unity
         pwd
         npm i
-        cd native_src
+        cd native_src_il2cpp
         pwd
         ANDROID_NDK=~/android-ndk-r21b node ../cli make --platform android --backend ${{ inputs.backend }} --config ${{ inputs.config }}
     - name: Upload
